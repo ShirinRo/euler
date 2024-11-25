@@ -1,0 +1,345 @@
+{
+  "name": "Hair",
+  "value": {
+    "_class": "FTFeatureRootItem",
+    "title": "Hair",
+    "controllerClass": "FTHairController",
+    "facesWidgetEnabled": true,
+    "defaultSelectedNodeName": "recolor",
+    "canvasModels": {
+      "hairCanvas": {
+        "pixelFormat": "LTGLPixelFormatR8Unorm",
+        "contentSubsamplingFactor": 1,
+        "defaultColor": "(0, 0, 0, 0)"
+      }
+    },
+    "stateBarButtonsToHide": [
+      "FTStateBarButtonUndo",
+      "FTStateBarButtonRedo"
+    ]
+  },
+  "childNodes": [
+    {
+      "name": "apply",
+      "value": {
+        "_class": "FTFeatureBrushItem",
+        "title": "Fix",
+        "tooltipText" : "Use the brush or eraser to expand or refine the effect.",
+        "eventsIdentifier": "Apply",
+        "iconURLsPair": {
+          "lightModeIconURL": "paintcode://FTToolsIcons/ApplyBrush"
+        },
+        "eraserIconURLsPair": {
+          "lightModeIconURL": "paintcode://FTToolsIcons/Eraser"
+        },
+        "configurationProviderClass": "FTMaskBrushConfigurationProvider",
+        "brushModel": {
+          "_class": "FTMaskBrushParametersModel",
+          "brushIdentifier": "applyBrush",
+          "targetCanvasIdentifier": "hairCanvas",
+          "channel": "FTMaskBrushChannelR",
+          "mode": "FTMaskBrushModeAdd",
+          "overlayMode": "FTBrushOverlayDisplayFadeInOut",
+          "scale": 0.7,
+          "flow": 0.06,
+          "edgeAvoidance": 0.95,
+          "edgeAvoidanceGuideTextureKey": "edgeAvoidanceGuide",
+          "hardness": 0.05
+        },
+        "eraserModel": {
+          "_class": "FTMaskBrushParametersModel",
+          "brushIdentifier": "applyEraser",
+          "mode": "FTMaskBrushModeErasePositive",
+          "overlayMode": "FTBrushOverlayDisplayFadeInOut",
+          "flow": 0.03
+        },
+        "disabled": {
+          "objectKey": "controller",
+          "keyPath": "applyDisabled"
+        }
+      }
+    },
+    {
+      "name": "recolor",
+      "value": {
+        "_class": "FTFeatureOneOfManyItem",
+        "title": "Recolor",
+        "shouldCenterVisibleSelectedChildItem": true,
+        "eventsIdentifier": "Recolor",
+        "defaultSelectedNodeName": "none",
+        "isVIP": true,
+        "iconURLsPair": {
+          "lightModeIconURL": "paintcode://FTToolsIcons/HairRecolor"
+        },
+        "boundProperty": {
+          "objectKey": "processor demultiplexer",
+          "keyPath": "colorImageName"
+        },
+        "disabled": {
+          "objectKey": "processor demultiplexer",
+          "keyPath": "noProcessorSelected"
+        }
+      },
+      "childNodes": [
+        {
+          "name": "none",
+          "value": {
+            "_class": "FTFeatureOptionItem",
+            "title": "",
+            "tooltipText": "Choose a hair color and use the slider to adjust the intensity.",
+            "thumbnailURL": "paintcode://FTToolsIcons/NoAsset",
+            "value": null
+          }
+        },
+        {
+          "name": "hairColor1",
+          "value": {
+            "_class": "FTFeatureOptionItem",
+            "title": "",
+            "eventsIdentifier": "hairColor1",
+            "thumbnailURL": "hairColor1Thumbnail.png",
+            "value": "hairColor1.jpg",
+            "boundProperty": {
+              "objectKey": "processor demultiplexer",
+              "keyPath": "colorIntensity"
+            }
+          }
+        },
+        {
+          "name": "hairColor2",
+          "value": {
+            "_class": "FTFeatureOptionItem",
+            "title": "",
+            "eventsIdentifier": "hairColor2",
+            "thumbnailURL": "hairColor2Thumbnail.png",
+            "value": "hairColor2.jpg",
+            "boundProperty": {
+              "objectKey": "processor demultiplexer",
+              "keyPath": "colorIntensity"
+            }
+          }
+        },
+        {
+          "name": "hairColor3",
+          "value": {
+            "_class": "FTFeatureOptionItem",
+            "title": "",
+            "eventsIdentifier": "hairColor3",
+            "thumbnailURL": "hairColor3Thumbnail.png",
+            "value": "hairColor3.jpg",
+            "boundProperty": {
+              "objectKey": "processor demultiplexer",
+              "keyPath": "colorIntensity"
+            }
+          }
+        },
+        {
+          "name": "hairColor4",
+          "value": {
+            "_class": "FTFeatureOptionItem",
+            "title": "",
+            "eventsIdentifier": "hairColor4",
+            "thumbnailURL": "hairColor4Thumbnail.png",
+            "value": "hairColor4.jpg",
+            "boundProperty": {
+              "objectKey": "processor demultiplexer",
+              "keyPath": "colorIntensity"
+            }
+          }
+        },
+        {
+          "name": "hairColor5",
+          "value": {
+            "_class": "FTFeatureOptionItem",
+            "title": "",
+            "eventsIdentifier": "hairColor5",
+            "thumbnailURL": "hairColor5Thumbnail.png",
+            "value": "hairColor5.jpg",
+            "boundProperty": {
+              "objectKey": "processor demultiplexer",
+              "keyPath": "colorIntensity"
+            }
+          }
+        },
+        {
+          "name": "hairColor6",
+          "value": {
+            "_class": "FTFeatureOptionItem",
+            "title": "",
+            "eventsIdentifier": "hairColor6",
+            "thumbnailURL": "hairColor6Thumbnail.png",
+            "value": "hairColor6.jpg",
+            "boundProperty": {
+              "objectKey": "processor demultiplexer",
+              "keyPath": "colorIntensity"
+            }
+          }
+        },
+        {
+          "name": "hairColor7",
+          "value": {
+            "_class": "FTFeatureOptionItem",
+            "title": "",
+            "eventsIdentifier": "hairColor7",
+            "thumbnailURL": "hairColor7Thumbnail.png",
+            "value": "hairColor7.jpg",
+            "boundProperty": {
+              "objectKey": "processor demultiplexer",
+              "keyPath": "colorIntensity"
+            }
+          }
+        },
+        {
+          "name": "hairColor8",
+          "value": {
+            "_class": "FTFeatureOptionItem",
+            "title": "",
+            "eventsIdentifier": "hairColor8",
+            "thumbnailURL": "hairColor8Thumbnail.png",
+            "value": "hairColor8.jpg",
+            "boundProperty": {
+              "objectKey": "processor demultiplexer",
+              "keyPath": "colorIntensity"
+            }
+          }
+        },
+        {
+          "name": "hairColor9",
+          "value": {
+            "_class": "FTFeatureOptionItem",
+            "title": "",
+            "eventsIdentifier": "hairColor9",
+            "thumbnailURL": "hairColor9Thumbnail.png",
+            "value": "hairColor9.jpg",
+            "boundProperty": {
+              "objectKey": "processor demultiplexer",
+              "keyPath": "colorIntensity"
+            }
+          }
+        },
+        {
+          "name": "hairColor10",
+          "value": {
+            "_class": "FTFeatureOptionItem",
+            "title": "",
+            "eventsIdentifier": "hairColor10",
+            "thumbnailURL": "hairColor10Thumbnail.png",
+            "value": "hairColor10.jpg",
+            "boundProperty": {
+              "objectKey": "processor demultiplexer",
+              "keyPath": "colorIntensity"
+            }
+          }
+        },
+        {
+          "name": "hairColor11",
+          "value": {
+            "_class": "FTFeatureOptionItem",
+            "title": "",
+            "eventsIdentifier": "hairColor11",
+            "thumbnailURL": "hairColor11Thumbnail.png",
+            "value": "hairColor11.jpg",
+            "boundProperty": {
+              "objectKey": "processor demultiplexer",
+              "keyPath": "colorIntensity"
+            }
+          }
+        },
+        {
+          "name": "hairColor12",
+          "value": {
+            "_class": "FTFeatureOptionItem",
+            "title": "",
+            "eventsIdentifier": "hairColor12",
+            "thumbnailURL": "hairColor12Thumbnail.png",
+            "value": "hairColor12.jpg",
+            "boundProperty": {
+              "objectKey": "processor demultiplexer",
+              "keyPath": "colorIntensity"
+            }
+          }
+        },
+        {
+          "name": "hairColor13",
+          "value": {
+            "_class": "FTFeatureOptionItem",
+            "title": "",
+            "eventsIdentifier": "hairColor13",
+            "thumbnailURL": "hairColor13Thumbnail.png",
+            "value": "hairColor13.jpg",
+            "boundProperty": {
+              "objectKey": "processor demultiplexer",
+              "keyPath": "colorIntensity"
+            }
+          }
+        },
+        {
+          "name": "hairColor14",
+          "value": {
+            "_class": "FTFeatureOptionItem",
+            "title": "",
+            "eventsIdentifier": "hairColor14",
+            "thumbnailURL": "hairColor14Thumbnail.png",
+            "value": "hairColor14.jpg",
+            "boundProperty": {
+              "objectKey": "processor demultiplexer",
+              "keyPath": "colorIntensity"
+            }
+          }
+        },
+        {
+          "name": "hairColor15",
+          "value": {
+            "_class": "FTFeatureOptionItem",
+            "title": "",
+            "eventsIdentifier": "hairColor15",
+            "thumbnailURL": "hairColor15Thumbnail.png",
+            "value": "hairColor15.jpg",
+            "boundProperty": {
+              "objectKey": "processor demultiplexer",
+              "keyPath": "colorIntensity"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "blend",
+      "value": {
+        "_class": "FTFeatureSliderItem",
+        "title": "Blend",
+        "eventsIdentifier": "Blend",
+        "iconURLsPair": {
+          "lightModeIconURL": "paintcode://FTToolsIcons/HairBlend"
+        },
+        "boundProperty": {
+          "objectKey": "processor demultiplexer",
+          "keyPath": "colorOpacity"
+        },
+        "disabled": {
+          "objectKey": "controller",
+          "keyPath": "colorBlendDisabled"
+        }
+      }
+    },
+    {
+      "name": "glow",
+      "value": {
+        "_class": "FTFeatureSliderItem",
+        "title": "Glow",
+        "eventsIdentifier": "Glow",
+        "iconURLsPair": {
+          "lightModeIconURL": "paintcode://FTToolsIcons/HairGlow"
+        },
+        "boundProperty": {
+          "objectKey": "processor demultiplexer",
+          "keyPath": "detailedGlow"
+        },
+        "disabled": {
+          "objectKey": "processor demultiplexer",
+          "keyPath": "noProcessorSelected"
+        }
+      }
+    }
+  ]
+}
