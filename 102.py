@@ -13,7 +13,7 @@ def is_origin_in_vectors(source, p1, p2):
     b = source[0] * inverse_v2[0] + source[1] * inverse_v2[1]
     print('a',a)
     print('b',b)
-    return a < 0 and b < 0
+    return a < 0 and b < 0 and a >= -1 and b >= -1
 
 # is_origin_in_vectors([-1, -5], [3, 3], [-3, 2])
 inputfile = open("0102_triangles.txt", "r")
@@ -28,7 +28,7 @@ for triangle in triangles:
     p2 = [int(coordinate) for coordinate in triangle[2:4]]
     p3 = [int(coordinate) for coordinate in triangle[4:]]
 
-    if is_origin_in_vectors(p1, p2, p3) and is_origin_in_vectors(p2, p3, p1) and is_origin_in_vectors(p3, p1, p2):
+    if is_origin_in_vectors(p1, p2, p3): # and is_origin_in_vectors(p2, p3, p1) and is_origin_in_vectors(p3, p1, p2):
         good_triangles += 1
 
 print(good_triangles)
